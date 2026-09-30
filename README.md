@@ -2,7 +2,7 @@
 
 Un sistema web seguro, en tiempo real y *mobile-first* para elegir al delegado de clase usando cuentas institucionales de Google y votación presencial mediante código QR.
 
-## 🌟 Características Principales
+## Características Principales
 
 *   **1 Alumno = 1 Voto (Google Auth):** Obliga a iniciar sesión con una cuenta de Google, garantizando que nadie pueda inventarse nombres o votar de forma anónima.
 *   **Sistema Anti-Pillín (Prevención de Doble Voto):** Registra una cookie criptográfica tras emitir un voto. Si un usuario intenta usar otra cuenta en el mismo dispositivo, es bloqueado.
@@ -13,7 +13,7 @@ Un sistema web seguro, en tiempo real y *mobile-first* para elegir al delegado d
 
 ---
 
-## ⚙️ Instalación y Configuración
+## Instalación y Configuración
 
 Para probar o alojar este proyecto (en local o en un VPS), debes configurar los siguientes parámetros en el archivo `config.php`:
 
@@ -47,7 +47,7 @@ define('ADMIN_PASSWORD', 'TuContraseñaSegura');
 
 ---
 
-## 🧠 Arquitectura y Funcionamiento Interno (Para Exposiciones)
+## Arquitectura y Funcionamiento Interno (Para Exposiciones)
 
 ### ¿Cómo funciona el QR y la Presencialidad?
 El servidor genera un `room_token` criptográfico que se guarda en SQLite. La URL del QR proyectado se construye dinámicamente inyectando este token (`?t=TOKEN`). Al escanearlo, PHP valida si el token coincide con el de la sala activa. Si alguien teclea la URL a mano desde su casa, el sistema bloquea el acceso.
@@ -65,7 +65,7 @@ Implementa una doble barrera:
 
 ---
 
-## 📂 Estructura de Archivos
+## Estructura de Archivos
 
 *   `index.php` - Bienvenida, validación de sala y login Google.
 *   `auth.php` - Verificación JWT y control anti-fraude.
